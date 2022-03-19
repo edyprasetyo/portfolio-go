@@ -41,6 +41,10 @@ func MdlDtl() *gorm.DB {
 	return db
 }
 
+func DatetimeNow() time.Time {
+	return time.Now().Add(time.Hour * 7)
+}
+
 func RetrieveListMapQuery(q string) map[int]map[string]string {
 	db := getDB()
 	rows, _ := db.Query(q)

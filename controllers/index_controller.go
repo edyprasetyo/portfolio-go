@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"portfolio-go/helper"
 	"portfolio-go/model"
-	"time"
 
 	beego "github.com/beego/beego/v2/server/web"
 )
@@ -31,7 +30,7 @@ func (c *IndexController) Index() {
 	}
 	visitor.Header1 = ""
 	visitor.Header2 = ""
-	visitor.Tanggal = time.Now()
+	visitor.Tanggal = helper.DatetimeNow()
 	helper.MdlDtl().Save(&visitor)
 
 	c.Data["visitor"] = utilLog.JumlahPengunjung

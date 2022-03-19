@@ -1,7 +1,6 @@
 package main
 
 import (
-	"os"
 	_ "portfolio-go/routers"
 
 	beego "github.com/beego/beego/v2/server/web"
@@ -15,7 +14,7 @@ func main() {
 	// var visitor model.Visitor
 	// helper.MdlDtl().First(&visitor)
 	// fmt.Println(visitor.Tanggal.Format("Monday, 02 January 2006"))
-	os.Setenv("TZ", "Asia/Jakarta")
 
+	// os.Setenv("TZ", "Asia/Jakarta")
 	beego.Run()
 }
